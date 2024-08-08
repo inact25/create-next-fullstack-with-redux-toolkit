@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {login} from '../../store/slices/authSlice';
-import {AppDispatch} from '../../store';
+import {login} from '../../../store/slices/authSlice';
+import {AppDispatch} from '../../../store';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');

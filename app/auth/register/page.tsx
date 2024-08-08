@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {register} from '../../store/slices/authSlice';
-import {AppDispatch} from '../../store';
+import {register} from '../../../store/slices/authSlice';
+import {AppDispatch} from '../../../store';
 
 const RegisterPage = () => {
     const [email, setEmail] = useState('');

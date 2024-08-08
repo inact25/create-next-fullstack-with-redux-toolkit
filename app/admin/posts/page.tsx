@@ -1,7 +1,7 @@
 "use client"
 import {useEffect} from 'react';
-import {Provider, useDispatch, useSelector} from 'react-redux';
-import {AppDispatch, RootState, store} from '@/store';
+import {useDispatch, useSelector} from 'react-redux';
+import {AppDispatch, RootState} from '@/store';
 import {createPost, deletePost, fetchPosts, updatePost} from '@/store/slices/postsSlice';
 import PostList from "@/components/organisms/PostList";
 import PostForm from "@/components/organisms/PostForm";
@@ -29,7 +29,6 @@ const HomePage = () => {
     };
 
     return (
-        <Provider store={store}>
             <div>
                 <h1>Posts</h1>
                 {loading && <p>Loading...</p>}
@@ -37,7 +36,6 @@ const HomePage = () => {
                 <PostList posts={posts} onUpdate={handleUpdatePost} onDelete={handleDeletePost}/>
                 <PostForm onSubmit={handleCreatePost}/>
             </div>
-        </Provider>
     );
 };
 
