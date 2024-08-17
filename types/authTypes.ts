@@ -1,10 +1,10 @@
 export interface User {
-    id: number;
-    email: string;
+  id: number;
+  email: string;
 }
 
 export interface AuthState {
-    user: User | null;
-    loading: boolean;
-    error: string | null;
+  user: User | null;
+  loading: boolean;
+  error: string | null;
 }
